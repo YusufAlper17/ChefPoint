@@ -1,6 +1,6 @@
 import { Card, CardHeader } from '../components/Card';
 import { Badge } from '../components/Badge';
-import { TrendingUp, Users, ShoppingBag, DollarSign, Armchair } from 'lucide-react';
+import { TrendingUp, ShoppingBag, DollarSign, Armchair } from 'lucide-react';
 import { mockRestaurants, mockOrders } from '../data/mockData';
 import { BarChart, Bar, XAxis, YAxis, CartesianGrid, Tooltip, ResponsiveContainer } from 'recharts';
 import { useLanguage } from '../contexts/LanguageContext';

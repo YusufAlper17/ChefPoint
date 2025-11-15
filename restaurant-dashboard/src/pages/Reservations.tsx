@@ -10,14 +10,12 @@ import {
   Clock, 
   Users, 
   Phone, 
-  Mail, 
   Check, 
   X, 
   Eye,
-  Filter,
   Search
 } from 'lucide-react';
-import { format, parseISO, addDays } from 'date-fns';
+import { format, parseISO } from 'date-fns';
 import { tr } from 'date-fns/locale';
 
 const mockReservations = [
@@ -270,7 +268,7 @@ const Reservations: React.FC = () => {
     const statusConfig = {
       pending: { variant: 'warning' as const, text: t('reservations.pending') },
       confirmed: { variant: 'success' as const, text: t('reservations.confirmed') },
-      completed: { variant: 'primary' as const, text: t('reservations.completed') },
+      completed: { variant: 'info' as const, text: t('reservations.completed') },
       cancelled: { variant: 'danger' as const, text: t('reservations.cancelled') },
       noShow: { variant: 'danger' as const, text: t('reservations.noShow') }
     };
@@ -384,7 +382,7 @@ const Reservations: React.FC = () => {
           <Input
             type="date"
             value={format(selectedDate, 'yyyy-MM-dd')}
-            onChange={(e) => setSelectedDate(new Date(e.target.value))}
+            onChange={(value) => setSelectedDate(new Date(value))}
           />
         </div>
       </div>

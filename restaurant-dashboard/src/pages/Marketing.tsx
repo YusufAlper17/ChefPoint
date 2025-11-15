@@ -1,10 +1,10 @@
 import { useState } from 'react';
-import { Card, CardHeader } from '../components/Card';
+import { Card } from '../components/Card';
 import { Button } from '../components/Button';
 import { Badge } from '../components/Badge';
 import { Modal } from '../components/Modal';
 import { Input, TextArea } from '../components/Input';
-import { Plus, Video, Image as ImageIcon, Heart, Eye, MessageCircle } from 'lucide-react';
+import { Plus, Video, Image as ImageIcon, Heart, Eye } from 'lucide-react';
 import { mockRestaurants } from '../data/mockData';
 import { useLanguage } from '../contexts/LanguageContext';
 

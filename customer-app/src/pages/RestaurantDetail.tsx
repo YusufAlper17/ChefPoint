@@ -6,7 +6,7 @@ import { Badge } from '../components/Badge';
 import { Rating } from '../components/Rating';
 import { 
   MapPin, Clock, Star, Award, Tag, ChevronLeft, 
-  Users, Phone, Globe, Heart, Calendar, Play, X
+  Heart, Calendar, Play, X
 } from 'lucide-react';
 import { mockRestaurants, mockReviews } from '../data/mockData';
 import { useLanguage } from '../contexts/LanguageContext';

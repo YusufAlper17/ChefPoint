@@ -9,6 +9,7 @@ interface ButtonProps {
   disabled?: boolean;
   fullWidth?: boolean;
   type?: 'button' | 'submit' | 'reset';
+  className?: string;
 }
 
 export const Button: React.FC<ButtonProps> = ({
@@ -19,7 +20,8 @@ export const Button: React.FC<ButtonProps> = ({
   icon: Icon,
   disabled = false,
   fullWidth = false,
-  type = 'button'
+  type = 'button',
+  className = ''
 }) => {
   const baseClasses = 'inline-flex items-center justify-center gap-2 font-medium rounded-lg transition-all duration-200 active:scale-95 disabled:opacity-50 disabled:cursor-not-allowed';
   
@@ -41,7 +43,7 @@ export const Button: React.FC<ButtonProps> = ({
       type={type}
       onClick={onClick}
       disabled={disabled}
-      className={`${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${fullWidth ? 'w-full' : ''}`}
+      className={`${baseClasses} ${variantClasses[variant]} ${sizeClasses[size]} ${fullWidth ? 'w-full' : ''} ${className}`}
     >
       {Icon && <Icon size={size === 'sm' ? 16 : size === 'lg' ? 24 : 20} />}
       {children}

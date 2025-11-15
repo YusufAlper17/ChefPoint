@@ -7,6 +7,7 @@ export interface Restaurant {
   totalReviews: number;
   priceRange: string;
   image: string;
+  introVideo?: string;
   location: {
     address: string;
     city: string;

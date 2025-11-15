@@ -1,6 +1,5 @@
 import { useState } from 'react';
 import { Card } from '../components/Card';
-import { Badge } from '../components/Badge';
 import { Heart, Eye, MessageCircle, Share2 } from 'lucide-react';
 import { mockRestaurants } from '../data/mockData';
 import { useLanguage } from '../contexts/LanguageContext';

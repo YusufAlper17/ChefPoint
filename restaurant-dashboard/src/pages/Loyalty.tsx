@@ -94,7 +94,7 @@ export const Loyalty = () => {
       </div>
 
       <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-6">
-        {loyaltyProgram.rewards.map((reward, index) => (
+        {loyaltyProgram.rewards.map((reward) => (
           <Card key={reward.id} hover className="relative">
             <div className="absolute top-4 right-4">
               <Badge variant="warning" size="lg">

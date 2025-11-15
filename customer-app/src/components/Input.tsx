@@ -10,6 +10,7 @@ interface InputProps {
   error?: string;
   disabled?: boolean;
   required?: boolean;
+  min?: string;
 }
 
 export const Input: React.FC<InputProps> = ({
@@ -21,7 +22,8 @@ export const Input: React.FC<InputProps> = ({
   icon: Icon,
   error,
   disabled = false,
-  required = false
+  required = false,
+  min
 }) => {
   return (
     <div className="w-full">
@@ -43,6 +45,7 @@ export const Input: React.FC<InputProps> = ({
           onChange={(e) => onChange(e.target.value)}
           placeholder={placeholder}
           disabled={disabled}
+          min={min}
           className={`w-full px-4 py-2 ${Icon ? 'pl-10' : ''} border rounded-lg focus:outline-none focus:ring-2 focus:ring-primary-500 focus:border-transparent transition-all ${
             error ? 'border-red-500' : 'border-gray-300'
           } ${disabled ? 'bg-gray-100 cursor-not-allowed' : ''}`}

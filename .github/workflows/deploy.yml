@@ -26,6 +26,12 @@ jobs:
         with:
           node-version: '18'
           cache: 'npm'
+          cache-dependency-path: |
+            package-lock.json
+            customer-app/package-lock.json
+            restaurant-dashboard/package-lock.json
+            advanced-qr-menu/package-lock.json
+            chef-point/package-lock.json
 
       - name: Build Customer App
         run: |

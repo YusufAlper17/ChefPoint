@@ -2,7 +2,7 @@ import { Card, CardHeader } from '../components/Card';
 import { Badge } from '../components/Badge';
 import { Button } from '../components/Button';
 import { 
-  User, MapPin, Award, ShoppingBag, Heart, 
+  Award, Heart, 
   Settings, LogOut, Star, Clock 
 } from 'lucide-react';
 import { mockRestaurants, mockOrders } from '../data/mockData';

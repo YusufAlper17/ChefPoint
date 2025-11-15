@@ -5,21 +5,14 @@ import { Button } from '../components/Button';
 import { Input } from '../components/Input';
 import { Modal } from '../components/Modal';
 import { 
-  Calendar, 
   Clock, 
-  Users, 
-  Phone, 
-  Mail, 
   CreditCard,
   Check,
   ArrowLeft,
   MapPin,
-  Star,
-  Wifi,
-  Car,
-  Music
+  Star
 } from 'lucide-react';
-import { format, addDays, addHours } from 'date-fns';
+import { format } from 'date-fns';
 import { tr } from 'date-fns/locale';
 
 const mockRestaurant = {
@@ -212,7 +205,7 @@ const Reservation: React.FC = () => {
                     <Input
                       type="date"
                       value={format(selectedDate, 'yyyy-MM-dd')}
-                      onChange={(e) => setSelectedDate(new Date(e.target.value))}
+                      onChange={(value) => setSelectedDate(new Date(value))}
                       min={format(new Date(), 'yyyy-MM-dd')}
                     />
                   </div>
@@ -301,14 +294,14 @@ const Reservation: React.FC = () => {
                     <Input
                       label={t('reservation.customerName')}
                       value={customerInfo.name}
-                      onChange={(e) => setCustomerInfo({...customerInfo, name: e.target.value})}
+                      onChange={(value) => setCustomerInfo({...customerInfo, name: value})}
                       placeholder={t('reservation.namePlaceholder')}
                       required
                     />
                     <Input
                       label={t('reservation.phone')}
                       value={customerInfo.phone}
-                      onChange={(e) => setCustomerInfo({...customerInfo, phone: e.target.value})}
+                      onChange={(value) => setCustomerInfo({...customerInfo, phone: value})}
                       placeholder="+90 532 123 4567"
                       required
                     />
@@ -318,7 +311,7 @@ const Reservation: React.FC = () => {
                     label={t('reservation.email')}
                     type="email"
                     value={customerInfo.email}
-                    onChange={(e) => setCustomerInfo({...customerInfo, email: e.target.value})}
+                    onChange={(value) => setCustomerInfo({...customerInfo, email: value})}
                     placeholder="ornek@email.com"
                     required
                   />

@@ -1,5 +1,5 @@
 import { useState } from 'react';
-import { Card, CardHeader } from '../components/Card';
+import { Card } from '../components/Card';
 import { Button } from '../components/Button';
 import { Badge } from '../components/Badge';
 import { Modal } from '../components/Modal';
