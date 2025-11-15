@@ -65,8 +65,35 @@ jobs:
           cp -r customer-app/dist/* deploy-dist/customer-app/
           mkdir -p deploy-dist/restaurant-dashboard
           cp -r restaurant-dashboard/dist/* deploy-dist/restaurant-dashboard/
-          mkdir -p deploy-dist/advenced_qr_menu
-          cp -r advanced-qr-menu/dist/* deploy-dist/advenced_qr_menu/
+          mkdir -p deploy-dist/advanced_qr_menu
+          cp -r advanced-qr-menu/dist/* deploy-dist/advanced_qr_menu/
+          
+          # GitHub Pages için gerekli dosyaları oluştur
+          echo "📄 Creating 404.html and .nojekyll files..."
+          
+          # Root için 404.html
+          if [ -f "deploy-dist/index.html" ]; then
+            cp deploy-dist/index.html deploy-dist/404.html
+            echo "✅ Created deploy-dist/404.html"
+          fi
+          
+          # Her alt klasör için 404.html oluştur
+          for dir in customer-app restaurant-dashboard advanced_qr_menu; do
+            if [ -f "deploy-dist/$dir/index.html" ]; then
+              cp deploy-dist/$dir/index.html deploy-dist/$dir/404.html
+              echo "✅ Created deploy-dist/$dir/404.html"
+            fi
+          done
+          
+          # .nojekyll dosyası oluştur (root ve her alt klasör için)
+          touch deploy-dist/.nojekyll
+          echo "✅ Created deploy-dist/.nojekyll"
+          for dir in customer-app restaurant-dashboard advanced_qr_menu; do
+            if [ -d "deploy-dist/$dir" ]; then
+              touch deploy-dist/$dir/.nojekyll
+              echo "✅ Created deploy-dist/$dir/.nojekyll"
+            fi
+          done
 
       - name: Setup Pages
         uses: actions/configure-pages@v4

@@ -28,12 +28,20 @@ const Home = () => {
 	const baseUrl = import.meta.env.BASE_URL || '/'
 	const isProduction = window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1'
 	
+	// App path mapping: development path -> production path
+	const appPathMap: Record<string, string> = {
+		'customer-app': 'customer-app',
+		'advanced-qr-menu': 'advanced_qr_menu',
+		'restaurant-dashboard': 'restaurant-dashboard'
+	}
+	
 	const getAppUrl = (appPath: string, devPort?: number) => {
 		if (isProduction) {
 			// GitHub Pages URL formatı: https://username.github.io/ChefPoint/app-path/
 			const origin = window.location.origin
-			// baseUrl zaten /ChefPoint/ formatında, appPath'i ekle
-			const url = `${origin}${baseUrl}${appPath}/`
+			// Production'da path mapping kullan (advanced-qr-menu -> advanced_qr_menu)
+			const productionPath = appPathMap[appPath] || appPath
+			const url = `${origin}${baseUrl}${productionPath}/`
 			return url
 		}
 		const url = devPort ? `http://localhost:${devPort}/` : '/'

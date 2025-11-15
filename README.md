@@ -66,7 +66,7 @@ Customer-facing application designed for restaurant discovery, reservations, and
 
 Advanced QR Menu system that allows customers to access menus, place orders, and make payments directly from their tables.
 
-**Live URL:** `https://[username].github.io/ChefPoint/advenced_qr_menu/`
+**Live URL:** `https://[username].github.io/ChefPoint/advanced_qr_menu/`
 
 **Features:**
 - QR Menu (Advanced)
@@ -209,7 +209,7 @@ After deployment, applications will be available at:
 - **Main Dashboard:** `https://[username].github.io/ChefPoint/`
 - **Customer App:** `https://[username].github.io/ChefPoint/customer-app/`
 - **Restaurant Dashboard:** `https://[username].github.io/ChefPoint/restaurant-dashboard/`
-- **QR Application:** `https://[username].github.io/ChefPoint/advenced_qr_menu/`
+- **QR Application:** `https://[username].github.io/ChefPoint/advanced_qr_menu/`
 
 ## Features
 

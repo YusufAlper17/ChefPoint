@@ -66,7 +66,7 @@ Restoran keşfi, rezervasyon ve paket servis siparişleri için tasarlanmış m�
 
 Müşterilerin masalarından menülere erişmesini, sipariş vermesini ve ödeme yapmasını sağlayan gelişmiş QR Menü sistemi.
 
-**Canlı URL:** `https://[username].github.io/ChefPoint/advenced_qr_menu/`
+**Canlı URL:** `https://[username].github.io/ChefPoint/advanced_qr_menu/`
 
 **Özellikler:**
 - QR Menü (Gelişmiş)
@@ -209,7 +209,7 @@ Dağıtımdan sonra uygulamalar şu adreslerde erişilebilir olacaktır:
 - **Ana Dashboard:** `https://[username].github.io/ChefPoint/`
 - **Customer App:** `https://[username].github.io/ChefPoint/customer-app/`
 - **Restaurant Dashboard:** `https://[username].github.io/ChefPoint/restaurant-dashboard/`
-- **QR Application:** `https://[username].github.io/ChefPoint/advenced_qr_menu/`
+- **QR Application:** `https://[username].github.io/ChefPoint/advanced_qr_menu/`
 
 ## Özellikler
 
