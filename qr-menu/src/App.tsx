@@ -7,8 +7,10 @@ import { Receipt } from './pages/Receipt';
 import { Review } from './pages/Review';
 
 function App() {
+  const basename = import.meta.env.BASE_URL || '/'
+  
   return (
-    <BrowserRouter>
+    <BrowserRouter basename={basename}>
       <Routes>
         <Route path="/" element={<QRScan />} />
         <Route path="/menu/:restaurantId/:tableId" element={<Menu />} />

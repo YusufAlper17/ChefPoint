@@ -24,24 +24,19 @@ interface AppCard {
 const Home = () => {
 	const { language, setLanguage } = useLanguage()
 
-	// Test için
-	console.log('Home component loaded')
-	console.log('Window location:', window.location.href)
-
 	// GitHub Pages için base URL - production'da GitHub Pages URL'i, development'ta localhost
+	const baseUrl = import.meta.env.BASE_URL || '/'
 	const isProduction = window.location.hostname !== 'localhost' && window.location.hostname !== '127.0.0.1'
-	console.log('Is production:', isProduction)
 	
 	const getAppUrl = (appPath: string, devPort?: number) => {
 		if (isProduction) {
 			// GitHub Pages URL formatı: https://username.github.io/ChefPoint/app-path/
-			const baseUrl = window.location.origin
-			const url = `${baseUrl}/ChefPoint/${appPath}/`
-			console.log('Generated URL (production):', url)
+			const origin = window.location.origin
+			// baseUrl zaten /ChefPoint/ formatında, appPath'i ekle
+			const url = `${origin}${baseUrl}${appPath}/`
 			return url
 		}
 		const url = devPort ? `http://localhost:${devPort}/` : '/'
-		console.log('Generated URL (dev):', url)
 		return url
 	}
 

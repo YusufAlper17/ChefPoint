@@ -19,16 +19,16 @@ function App() {
       <Routes>
         <Route path="/" element={<Navigate to="/login" replace />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/" element={<Layout />}>
-          <Route path="dashboard" element={<Dashboard />} />
-          <Route path="tables" element={<Tables />} />
-          <Route path="menu" element={<Menu />} />
-          <Route path="orders" element={<Orders />} />
-          <Route path="reservations" element={<Reservations />} />
-          <Route path="campaigns" element={<Campaigns />} />
-          <Route path="loyalty" element={<Loyalty />} />
-          <Route path="marketing" element={<Marketing />} />
-          <Route path="settings" element={<Settings />} />
+        <Route element={<Layout />}>
+          <Route path="/dashboard" element={<Dashboard />} />
+          <Route path="/tables" element={<Tables />} />
+          <Route path="/menu" element={<Menu />} />
+          <Route path="/orders" element={<Orders />} />
+          <Route path="/reservations" element={<Reservations />} />
+          <Route path="/campaigns" element={<Campaigns />} />
+          <Route path="/loyalty" element={<Loyalty />} />
+          <Route path="/marketing" element={<Marketing />} />
+          <Route path="/settings" element={<Settings />} />
         </Route>
       </Routes>
     </BrowserRouter>

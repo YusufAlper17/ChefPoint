@@ -10,7 +10,7 @@ import { RestaurantInfo } from './pages/RestaurantInfo';
 function App() {
   return (
     <LanguageProvider>
-      <BrowserRouter basename={import.meta.env.BASE_URL || '/ChefPoint/advenced_qr_menu/'}>
+      <BrowserRouter basename={import.meta.env.BASE_URL || '/ChefPoint/advanced_qr_menu/'}>
         <Routes>
           <Route path="/" element={<TableOverview />} />
           <Route path="/menu" element={<Menu />} />
