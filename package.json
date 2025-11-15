@@ -1,0 +1,15 @@
+{
+  "name": "chefpoint",
+  "version": "1.0.0",
+  "private": true,
+  "description": "ChefPoint - Restaurant Management Platform",
+  "scripts": {
+    "build:all": "./deploy.sh",
+    "deploy": "npm run build:all && gh-pages -d deploy-dist",
+    "install:all": "cd customer-app && npm install && cd ../restaurant-dashboard && npm install && cd ../advanced-qr-menu && npm install && cd ../chef-point && npm install"
+  },
+  "devDependencies": {
+    "gh-pages": "^6.3.0"
+  }
+}
+

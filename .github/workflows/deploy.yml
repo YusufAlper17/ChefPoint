@@ -1,0 +1,76 @@
+name: Deploy to GitHub Pages
+
+on:
+  push:
+    branches: [ main, master ]
+  workflow_dispatch:
+
+permissions:
+  contents: read
+  pages: write
+  id-token: write
+
+concurrency:
+  group: "pages"
+  cancel-in-progress: false
+
+jobs:
+  build-and-deploy:
+    runs-on: ubuntu-latest
+    steps:
+      - name: Checkout
+        uses: actions/checkout@v4
+
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '18'
+          cache: 'npm'
+
+      - name: Build Customer App
+        run: |
+          cd customer-app
+          npm ci
+          npm run build
+
+      - name: Build Restaurant Dashboard
+        run: |
+          cd restaurant-dashboard
+          npm ci
+          npm run build
+
+      - name: Build Advanced QR Menu
+        run: |
+          cd advanced-qr-menu
+          npm ci
+          npm run build
+
+      - name: Build Chef Point Dashboard
+        run: |
+          cd chef-point
+          npm ci
+          npm run build
+
+      - name: Combine dist folders
+        run: |
+          mkdir -p deploy-dist
+          cp -r chef-point/dist/* deploy-dist/
+          mkdir -p deploy-dist/customer-app
+          cp -r customer-app/dist/* deploy-dist/customer-app/
+          mkdir -p deploy-dist/restaurant-dashboard
+          cp -r restaurant-dashboard/dist/* deploy-dist/restaurant-dashboard/
+          mkdir -p deploy-dist/advenced_qr_menu
+          cp -r advanced-qr-menu/dist/* deploy-dist/advenced_qr_menu/
+
+      - name: Setup Pages
+        uses: actions/configure-pages@v4
+
+      - name: Upload artifact
+        uses: actions/upload-pages-artifact@v3
+        with:
+          path: './deploy-dist'
+
+      - name: Deploy to GitHub Pages
+        id: deployment
+        uses: actions/deploy-pages@v4
+
