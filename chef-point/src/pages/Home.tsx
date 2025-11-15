@@ -68,7 +68,7 @@ const Home = () => {
 					: 'Advanced QR Menu for instant table-side menu access, ordering and payment',
 			icon: <QrCode className="w-12 h-12" />,
 			gradient: 'from-purple-500 to-pink-500',
-			link: getAppUrl('advenced_qr_menu', 5177),
+			link: getAppUrl('advanced-qr-menu', 5177),
 			features:
 				language === 'tr'
 					? ['QR Menü (Advanced)', 'Anlık Sipariş', 'Ödeme', 'Değerlendirme']
