@@ -245,7 +245,9 @@ This is a frontend demonstration project. For production use, the following comp
 
 ## License
 
-This project is a demonstration application.
+This project is licensed under a custom proprietary license. Unauthorized use, distribution, modification, hosting, or commercial use is prohibited without prior written permission from the author.
+
+See the `LICENSE` file for full terms.
 
 ## Support
 

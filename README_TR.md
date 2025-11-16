@@ -245,7 +245,9 @@ Bu bir frontend gösterim projesidir. Üretim kullanımı için aşağıdaki bil
 
 ## Lisans
 
-Bu proje bir gösterim uygulamasıdır.
+Bu proje özel ve tescilli bir lisans ile lisanslanmıştır. Yazarın önceden yazılı izni olmadan kullanılamaz, dağıtılamaz, değiştirilemez, barındırılamaz veya ticari amaçlarla kullanılamaz.
+
+Tam şartlar için `LICENSE` dosyasına bakınız.
 
 ## Destek
 
