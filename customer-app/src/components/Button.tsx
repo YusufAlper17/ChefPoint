@@ -3,7 +3,7 @@ import React from 'react';
 interface ButtonProps {
   children: React.ReactNode;
   onClick?: () => void;
-  variant?: 'primary' | 'secondary' | 'danger' | 'success';
+  variant?: 'primary' | 'secondary' | 'light' | 'danger' | 'success';
   size?: 'sm' | 'md' | 'lg';
   icon?: React.ComponentType<{ size?: number; className?: string }>;
   disabled?: boolean;
@@ -28,6 +28,7 @@ export const Button: React.FC<ButtonProps> = ({
   const variantClasses = {
     primary: 'bg-primary-600 text-white hover:bg-primary-700 shadow-sm hover:shadow-md',
     secondary: 'bg-gray-200 text-gray-700 hover:bg-gray-300',
+    light: 'bg-white text-primary-600 hover:bg-primary-50 shadow-sm hover:shadow-md',
     danger: 'bg-red-600 text-white hover:bg-red-700 shadow-sm hover:shadow-md',
     success: 'bg-green-600 text-white hover:bg-green-700 shadow-sm hover:shadow-md'
   };

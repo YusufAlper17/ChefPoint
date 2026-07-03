@@ -232,7 +232,7 @@ export const Home = () => {
             </p>
             
             <div className="flex gap-4 justify-center flex-wrap">
-              <Button size="lg" onClick={() => navigate('/app/explore')} className="shadow-2xl hover:shadow-primary-500/30 bg-white text-primary-600 hover:bg-primary-50">
+              <Button size="lg" variant="light" onClick={() => navigate('/app/explore')} className="shadow-2xl hover:shadow-primary-500/30">
                 {t('customer.startExploring')}
               </Button>
               <Button size="lg" variant="secondary" onClick={() => navigate('/login')} className="shadow-2xl bg-white/20 backdrop-blur-lg text-white border-white/30 hover:bg-white/30">
