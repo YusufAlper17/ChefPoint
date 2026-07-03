@@ -58,7 +58,6 @@ DEPLOY.md
 GITHUB_SETUP.md
 
 # Deployment configs for other platforms
-**/vercel.json
 **/netlify.toml
 
 # Development scripts (not needed in production)

@@ -1,0 +1,29 @@
+{
+  "buildCommand": "chmod +x deploy-vercel.sh && ./deploy-vercel.sh",
+  "outputDirectory": "deploy-dist",
+  "redirects": [
+    {
+      "source": "/",
+      "destination": "/ChefPoint/",
+      "permanent": false
+    }
+  ],
+  "rewrites": [
+    {
+      "source": "/ChefPoint/customer-app/:path*",
+      "destination": "/ChefPoint/customer-app/index.html"
+    },
+    {
+      "source": "/ChefPoint/restaurant-dashboard/:path*",
+      "destination": "/ChefPoint/restaurant-dashboard/index.html"
+    },
+    {
+      "source": "/ChefPoint/advanced_qr_menu/:path*",
+      "destination": "/ChefPoint/advanced_qr_menu/index.html"
+    },
+    {
+      "source": "/ChefPoint/:path*",
+      "destination": "/ChefPoint/index.html"
+    }
+  ]
+}
